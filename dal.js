@@ -4,6 +4,8 @@ const PouchDB = require('pouchdb')
 const dbName = process.env.COUCH_DATABASE
 const dbURL = process.env.COUCH_URL
 
+console.log('db ')
+
 const db = new PouchDB(dbURL + dbName)
 
 const addBook = (book, callback) => add(book, callback)
