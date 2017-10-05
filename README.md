@@ -36,7 +36,7 @@ You will need to create a local **.dnv** file to store your application secrets.
   **example**
 
   ```
-  
+
   ```
 
 
@@ -86,7 +86,7 @@ response 200
 {
   "ok": true,
   "id": "book_brave_new_world",
-  "rev": ""
+  "rev": "3-85f2d37145a65f30b72fc56e16a39661"
 }
 ```
 
@@ -94,6 +94,46 @@ response 200
 ## Get a book - `GET /books/{id}`
 
 retrieves a single book by the book `{id}` route parameter.
+
+**Example**
+
+```
+GET /books/book_brave_new_world
+```
+**response 200**
+
+```
+{
+  "_id": "book_brave_new_world",
+  "_rev": "3-85f2d37145a65f30b72fc56e16a39661",
+  "title": "A brave new world",
+  "author": "author_aldous_huxley",
+  "publisher": "Penguin Books",
+  "ISDN": "1293478753",
+  "pages": 574,
+  "genre": "Fiction",
+  "description": "Brave New World is a novel written in 1931 by A Huxley, and published in 1932. Set in London in the year AD 2540 (632 A.F.—'After Ford'—in the book), the novel anticipates developments in reproductive technology, sleep-learning, psychological manipulation, and classical conditioning that are combined to make a profound change in society. Huxley followed this book with a reassessment in an essay, Brave New World Revisited (1958), and with Island (1962), his final novel.",
+  "Rating": "95",
+  "prices": [
+    {
+      "type": "paperback",
+      "price": 9.99
+    },
+    {
+      "type": "hardback",
+      "price": 19.99
+    },
+    {
+      "type": "audio",
+      "price": 19.99
+    },
+    {
+      "type": "kindle",
+      "price": 12.99
+    }
+  ]
+}
+```
 
 ### Route Parameters
 
