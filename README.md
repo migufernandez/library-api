@@ -108,6 +108,7 @@ GET /books/book_brave_new_world
   "_rev": "3-85f2d37145a65f30b72fc56e16a39661",
   "title": "A brave new world",
   "author": "author_aldous_huxley",
+  "type": "book",
   "publisher": "Penguin Books",
   "ISDN": "1293478753",
   "pages": 574,
@@ -141,9 +142,28 @@ GET /books/book_brave_new_world
 
 ## Update a book - `PUT /books/{id}`
 
-Updates a single book by the book `{id}` route parameter.
+Updates a single book using the book `{id}` route parameter.
 
+## Delete a book - `DELETE /books/{id}`
 
+Deletes a single book using the book `{id}` route parameter
+
+**Example**
+
+```
+DELETE /books/book_brave_new_world
+
+```
+
+**response 200**
+
+```
+{
+  "ok": true,
+  "id": "mydoc",
+  "rev": "2-9AF304BE281790604D1D8A4B0F4C9ADB"
+}
+```
 
 
 ## List the books - `GET /books`
